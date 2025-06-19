@@ -4,51 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betinah's Weather App</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="app">
+    
         
     <header>
-        <form>
-            <input type="text" placeholder="Enter city name" required/>
-            <input type="submit" value="Search" />
+        <form class="city-input" >
+            <input type="text" placeholder="Enter city name" id="city" required/>
+            <button type="submit" id="search-button">Search</button>
         </form>
     </header>
-    <main>
-        <h1>
-            Paris
-            <div>
-                31°C
-            </div>
+    <div class="app">
+        <main>
+            <h1>
+                Paris
+                <br>
+                <div>
+                    
+                        31°C
+                </div>
     </h1>
         <p>
             Monday, 10 October 2023
             <br>
             12:00 PM
         </p>
-        <div>
-            Tuesday
-            <br>
-            <br>
-        
-            30°C / 20°C
-            <br>
+    </div>
+    <div class="weather-details">
+        <div class="weather-row">
+            <span class="weather-one">
+                Tuesday
+                <br><br>
+                30°C / 20°C
+            </span>
+            <span class="weather-one">
                 Wed
-                <br>
-                <br>
+                <br><br>
                 28°C / 18°C
-            <br>
+            </span>
+            <span class="weather-one">
                 Thu
-                <br>
-                <br>
+                <br><br>
                 27°C / 19°C
-                <br>
+            </span>
+            <span class="weather-one">
                 Fri
-                <br>
-                <br>
+                <br><br>
                 26°C / 20°C
-
-    </main>
+            </span>
+            <span class="weather-one">
+                Sat
+                <br><br>
+                25°C / 21°C
+            </span>
+            <span class="weather-one">
+                Sun
+                <br><br>
+                24°C / 22°C
+            </span>
+        </div>
+    </div>
     <br>
 
     <footer>
