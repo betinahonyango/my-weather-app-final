@@ -1,0 +1,66 @@
+body{
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    color: white;
+}
+.app{
+    background-color: #557578;
+    border: 1px solid black;
+    opacity: 70%;
+    border-radius: 10px;
+    margin: 20px 100px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.45rem;
+}
+.city-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+input#city {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-right: 10px;
+    background-color: #435b5d;
+    color: white;
+  }
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #B7F0E4;
+    color: grey;
+    border: 2px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+button:hover {
+    background: #598078;
+    color: black;
+}
+.weather-row {
+    display: flex;
+    gap: 40px; /* Adjust gap as needed */
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    padding: 20px;
+}
+.weather-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #598078;
+    padding: 12px 18px;
+    border-radius: 8px;
+    opacity: 70%;
+}
