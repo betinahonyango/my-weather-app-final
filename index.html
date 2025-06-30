@@ -5,31 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betinah's Weather App</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     
         
     <header>
-        <form class="city-input" >
-            <input type="text" placeholder="Enter city name" id="city" required/>
+        <form class="city-input" id="city-form" >
+            <input type="text" placeholder="Enter city name" id="search-input" required/>
             <button type="submit" id="search-button">Search</button>
         </form>
     </header>
     <div class="app">
-        <main>
-            <h1>
-                Paris
-                <br>
-                <div>
-                    
-                        31°C
-                </div>
-    </h1>
-        <p>
-            Monday, 10 October 2023
-            <br>
-            12:00 PM
-        </p>
+     <div class="WeatherInfo">
+        <div class="row">
+          <div class="col">
+            <h1 class="city-name" id="city-name"></h1>
+            <ul id="more-info">
+              <li><span id="date-time">Monday 18:41</span>, broken clouds</li>
+              <li>
+                Humidity: <strong>22%</strong>, Wind: <strong>2.96km/h</strong>
+              </li>
+            </ul>
+          </div>
+          <div >
+            <div class="temperature-container">
+              <canvas width="52" height="52"></canvas>
+              <div>
+                <span id="temperature"></span>
+                <span class="unit"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="weather-details">
         <div class="weather-row">
@@ -74,5 +83,6 @@
         <a href="https://weather-app-betinah.netlify.app/" target="_blank">Netlify</a>
     </footer>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
