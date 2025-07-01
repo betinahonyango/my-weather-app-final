@@ -50,6 +50,27 @@ button:hover {
     padding: 12px 18px;
     border-radius: 8px;
     opacity: 70%;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
+}
+.weather-one:hover {
+    transform: scale(1.14);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background-color: #4a6b6b;
+    color: #f6f6f6;
+}
+.weather-one-date {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f6f6f6;
+}
+.weather-one-icon {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.weather-one-temp {
+    font-size: 1.5rem;
+
+    color: #f6f6f6;
 }
 ul {
     list-style: none;
@@ -87,7 +108,16 @@ ul {
     font-size: 8.45rem;
     flex-direction: row;
     padding: 20px 40px;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
   }
+  
+  .WeatherInfo .row:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background-color: #4a6b6b;
+    color: #f6f6f6;
+}
+
   .WeatherInfo .col {
     display: flex;
     flex-direction: column;
@@ -114,6 +144,12 @@ ul {
   .WeatherInfo li {
     margin-bottom: 5px;
   }
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    line-height: 400px;
+  }
   .temperature-container {
     display: flex;
     align-items: center;
@@ -121,7 +157,8 @@ ul {
   }
   
   #temperature {
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: bold;
     color: #d5d5d5;
   }
+  
