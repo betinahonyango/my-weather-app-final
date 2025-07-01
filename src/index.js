@@ -27,9 +27,25 @@ function formatDate(date) {
 
   return `${days[date.getDay()]} ${hours}:${minutes}`;
 }
+function displayForecastInfo() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  let forecastHTML = ""; 
+
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + `<div class="weather-one">
+      <div class="weather-one-date">${day}</div>
+      <div class="weather-one-icon">🌧</div>
+      <div class="weather-one-temp">30°C / 20°C</div>
+    </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function getWeatherData(city) {
   let apiKey = "50do3122d9528t350cd40fbf4dc0035a";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(updateWeatherData);
 }
@@ -43,3 +59,4 @@ function searchCity(event) {
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", searchCity);
 getWeatherData("Paris");
+displayForecastInfo()
