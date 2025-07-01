@@ -7,6 +7,7 @@ function updateWeatherData(response) {
   let wind = document.querySelector("#wind");
   let dateTime = document.querySelector("#date-time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityName.innerHTML = response.data.city;
   dateTime.innerHTML = formatDate(date);
@@ -14,7 +15,7 @@ function updateWeatherData(response) {
   weatherDescription.innerHTML = response.data.condition.description;
   humidity.innerHTML = response.data.temperature.humidity + "%";
   wind.innerHTML = response.data.wind.speed + "km/h";
-
+  iconElement.innerHTML = `<img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png" class="weather-icon"/>`;
 }
 function formatDate(date) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
