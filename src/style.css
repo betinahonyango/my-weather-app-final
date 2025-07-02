@@ -99,7 +99,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #557578;
+    font-weight : bold;
+    background-color: #66969b;
     border: 1px solid black;
     opacity: 70%;
     border-radius: 10px;
